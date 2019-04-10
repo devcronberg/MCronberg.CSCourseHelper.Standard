@@ -7,7 +7,8 @@ namespace MCronberg
     {
         void AddPerson(Person p);
         void DeletePerson(int id);
-        List<Person> GetPeople(int count = 200);
+        List<Person> GetPeople();
+        List<Person> GetPeople(int count);
         Person GetPerson(int id);
         void UpdatePerson(Person p);
     }

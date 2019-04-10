@@ -417,14 +417,20 @@ namespace MCronberg
         }
         
 
-        public static List<Person> JustGetPeople(int count = 200)
+        public static List<Person> JustGetPeople(int count = 25)
         {
-            return new PersonRepositoryStatic().GetPeople(count);
+            return new PersonRepositoryStatic().GetPeople().Take(count).ToList(); ;
         }
 
-        public List<Person> GetPeople(int count = 200)
+        public List<Person> GetPeople()
         {
             
+            return people;
+        }
+
+        public List<Person> GetPeople(int count)
+        {
+
             return people.Take(count).ToList();
         }
 
@@ -459,7 +465,7 @@ namespace MCronberg
 
         }
 
-        public static string GenerateCS(List<Person> lst)
+        private static string GenerateCS(List<Person> lst)
         {
             System.Text.StringBuilder sb = new StringBuilder();
             sb.AppendLine("var lst = new List<Person>();");

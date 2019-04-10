@@ -14,6 +14,9 @@ namespace MCronberg
             this.file = file;
         }
 
+        
+
+
         public void AddPerson(Person p)
         {
             List<Person> lst = GetPeople();
@@ -75,7 +78,29 @@ namespace MCronberg
             }
         }
 
-        public List<Person> GetPeople(int count = 200)
+        public static List<Person> JustGetPeople(int count = 25, string path = "")
+        {
+            PersonRepositoryFile m = new PersonRepositoryFile(path);
+            return m.GetPeople(count);
+        }
+
+        public static void SaveToFile(List<Person> lst, string path)
+        {
+            try
+            {
+                XmlSerializer ser = new XmlSerializer(typeof(List<Person>));
+                using (TextWriter writer = new StreamWriter(path))
+                {
+                    ser.Serialize(writer, lst);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error writing people", ex);
+            }
+        }
+
+        public List<Person> GetPeople()
         {
             if (!System.IO.File.Exists(file))
             {
@@ -83,6 +108,12 @@ namespace MCronberg
             }
 
             return Load();
+        }
+
+
+        public List<Person> GetPeople(int count)
+        {
+            return Load().Take(count).ToList();
         }
 
         public Person GetPerson(int id)
@@ -118,26 +149,28 @@ namespace MCronberg
             }
         }
 
-        public static void CreateFileWithMockData(string file)
+        public static string CreateFileWithMockData(string path = null)
         {
-            System.IO.File.Delete(file);
-            IPersonRepository m = new PersonRepositoryMock();
-            IPersonRepository f = new PersonRepositoryFile(file);
-            foreach (Person item in m.GetPeople())
+            if (path == null)
             {
-                f.AddPerson(item);
+                path = System.IO.Path.GetTempFileName();
             }
+
+            var l = PersonRepositoryMock.JustGetPeople(200);
+            PersonRepositoryFile.SaveToFile(l, path);
+            return path;
         }
 
-        public static void CreateFileWithRandomData(string file)
+        public static string CreateFileWithRandomData(string path = null)
         {
-            System.IO.File.Delete(file);
-            IPersonRepository m = new PersonRepositoryRandom();
-            IPersonRepository f = new PersonRepositoryFile(file);
-            foreach (Person item in m.GetPeople())
+            if (path == null)
             {
-                f.AddPerson(item);
+                path = System.IO.Path.GetTempFileName();
             }
+
+            var l = PersonRepositoryStatic.JustGetPeople(200);
+            PersonRepositoryFile.SaveToFile(l, path);
+            return path;
         }
     }
 }

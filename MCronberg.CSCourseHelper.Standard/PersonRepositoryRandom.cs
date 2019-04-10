@@ -44,14 +44,19 @@ namespace MCronberg
         }
 
 
-        public static List<Person> JustGetPeople(int count = 200)
+        public static List<Person> JustGetPeople(int count = 25)
         {
             return people.OrderBy(i => i.PersonId).Take(count).ToList();
         }
 
-        public List<Person> GetPeople(int count = 200)
+        public List<Person> GetPeople()
         {
-            return people.OrderBy(i => i.PersonId).Take(count).ToList();
+            return people;
+        }
+
+        public List<Person> GetPeople(int count)
+        {
+            return people.Take(count).ToList();
         }
 
         public Person GetPerson(int id)
@@ -61,23 +66,17 @@ namespace MCronberg
 
         public void AddPerson(Person p)
         {
-            people.Add(p);
+            throw new NotImplementedException();
         }
 
         public void UpdatePerson(Person p)
         {
-            Person np = GetPeople().Find(i => i.PersonId == p.PersonId);
-            np.DateOfBirth = p.DateOfBirth;
-            np.FirstName = p.FirstName;
-            np.Gender = p.Gender;
-            np.Height = p.Height;
-            np.IsHealthy = p.IsHealthy;
-            np.LastName = p.LastName;
+            throw new NotImplementedException();
         }
 
         public void DeletePerson(int id)
         {
-            people.Remove(people.Find(i => i.PersonId == id));
+            throw new NotImplementedException();
         }
 
         public void Dispose()

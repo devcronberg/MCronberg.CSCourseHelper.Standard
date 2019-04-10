@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MCronberg
 {
     public class PersonRepositoryMock : IPersonRepository
     {
 
-        public static List<Person> JustGetPeople(int count = 200)
+        public static List<Person> JustGetPeople(int count = 25)
         {
-            return new PersonRepositoryMock().GetPeople(count);
+            return new PersonRepositoryMock().GetPeople().Take(count).ToList();
         }
 
         public void AddPerson(Person p)
@@ -23,22 +24,28 @@ namespace MCronberg
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            
         }
 
-        public List<Person> GetPeople(int count = 200)
+        public List<Person> GetPeople()
         {
             List<Person> p = new List<Person>();
-            for (int i = 1; i <= count; i++)
+            for (int i = 1; i <= 200; i++)
             {
                 p.Add(new Person() { PersonId = i, FirstName = "MockPerson", LastName = "#" + i, DateOfBirth = new DateTime(2019, 1, 1), Gender = Gender.Male, Height = 180, IsHealthy = true });
             }
             return p;
         }
 
+        public List<Person> GetPeople(int count)
+        {
+
+            return GetPeople().Take(count).ToList();
+        }
+
         public Person GetPerson(int id)
         {
-            return new Person() { PersonId = id, FirstName = "MockPerson", LastName = "#" + id, DateOfBirth = new DateTime(2019, 1, 1), Gender = Gender.Male, Height = 180, IsHealthy = true };
+            return GetPeople()[0];
         }
 
         public void UpdatePerson(Person p)
