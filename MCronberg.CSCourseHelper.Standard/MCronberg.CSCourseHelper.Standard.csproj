@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -9,8 +9,8 @@
     <PackageProjectUrl>https://github.com/devcronberg/MCronberg.CSCourseHelper.Standard</PackageProjectUrl>
     <RepositoryUrl>https://github.com/devcronberg/MCronberg.CSCourseHelper.Standard.git</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.0.1</Version>
-    <PackageReleaseNotes>New static repository (same list of random people)</PackageReleaseNotes>
+    <Version>1.0.2</Version>
+    <PackageReleaseNotes>PersonRepositoryFile refactor</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
