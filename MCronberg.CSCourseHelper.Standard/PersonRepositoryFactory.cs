@@ -73,5 +73,10 @@ namespace MCronberg
             return new PersonRepositoryRandom();
         }
 
+        public static IPersonRepository GetStaticRepository()
+        {
+            return new PersonRepositoryStatic();
+        }
+
     }
 }

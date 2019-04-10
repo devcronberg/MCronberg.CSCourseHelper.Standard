@@ -4,8 +4,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Michell Cronberg</Authors>
-    <Description>Simple package containg types used i C# training. See https://github.com/devcronberg/MCronberg.CSTrainer.Package for examples.</Description>
+    <Description>Simple package containg types used i C# training. See https://github.com/devcronberg/MCronberg.CSCourseHelper.Standard for examples.</Description>
     <Copyright>Michell Cronberg</Copyright>
+    <PackageProjectUrl>https://github.com/devcronberg/MCronberg.CSCourseHelper.Standard</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/devcronberg/MCronberg.CSCourseHelper.Standard.git</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
 </Project>
