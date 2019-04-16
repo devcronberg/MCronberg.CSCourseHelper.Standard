@@ -2,6 +2,6 @@
 
 Documentation is comming - look at test until then.
 
-![](person.png)
+![](/Person.png)
 
-![](respository.png)
+![](/respository.png)
