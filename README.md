@@ -4,4 +4,4 @@ Documentation is comming - look at test until then.
 
 ![](/Person.png)
 
-![](/respository.png)
+![](/repository.png)
