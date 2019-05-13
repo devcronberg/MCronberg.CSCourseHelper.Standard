@@ -13,6 +13,9 @@ namespace MCronberg.CSCourseHelper.Standard.Demo
             p.FirstName = "*";
             r.UpdatePerson(p);
             p = r.GetPerson(1);
+
+            Console.WriteLine(p.ToStringEx());
+            Console.WriteLine(p.ToJsonString());
         }
     }
 }

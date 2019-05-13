@@ -9,8 +9,12 @@
     <PackageProjectUrl>https://github.com/devcronberg/MCronberg.CSCourseHelper.Standard</PackageProjectUrl>
     <RepositoryUrl>https://github.com/devcronberg/MCronberg.CSCourseHelper.Standard.git</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.0.2</Version>
-    <PackageReleaseNotes>PersonRepositoryFile refactor</PackageReleaseNotes>
+    <Version>1.0.3</Version>
+    <PackageReleaseNotes>ToStringEx and ToJsonString</PackageReleaseNotes>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
 
 </Project>
