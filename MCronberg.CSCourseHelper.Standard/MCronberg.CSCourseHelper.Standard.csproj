@@ -9,8 +9,10 @@
     <PackageProjectUrl>https://github.com/devcronberg/MCronberg.CSCourseHelper.Standard</PackageProjectUrl>
     <RepositoryUrl>https://github.com/devcronberg/MCronberg.CSCourseHelper.Standard.git</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.0.3</Version>
-    <PackageReleaseNotes>ToStringEx and ToJsonString</PackageReleaseNotes>
+    <Version>1.0.4</Version>
+    <PackageReleaseNotes>Added ConsoleEx</PackageReleaseNotes>
+    <FileVersion>1.0.4.0</FileVersion>
+    <AssemblyVersion>1.0.4.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
