@@ -20,7 +20,8 @@ namespace MCronberg.CSCourseHelper.Standard.Demo
             //p.Dump();
             r.GetPeople().Dump();
 
-            typeof(Test).ToStringEx(@"c:\tmp\m.txt");
+            typeof(MCronberg.MyExtensions).ToStringEx(@"c:\tmp\m.txt", showAccessStaticInstance: false);
+            //Console.WriteLine(typeof(MyExtensions).ToStringEx(showAccessStaticInstance: false));
         }
     }
 
