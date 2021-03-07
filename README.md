@@ -9,7 +9,7 @@ This is a simple package to help in C# training. It contains:
     - Reflection info
   - instance.ToJsonString() (obsolete - use Dump)
   - instance.Dump()
-    - returns JSON    - 
+    - returns JSON    
   - IEnumerable<T>.Dump()
     - returns JSON
 - ConsoleEx (Exstra Console methods)
