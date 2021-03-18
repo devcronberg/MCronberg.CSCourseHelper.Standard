@@ -326,7 +326,7 @@ namespace MCronberg
             return sb.ToString();
         }
 
-        private static string GetJson(object o, bool indented)
+        private static string GetJson(object o, bool indented = false)
         {
             return System.Text.Json.JsonSerializer.Serialize(o, new System.Text.Json.JsonSerializerOptions { WriteIndented = indented });
         }
