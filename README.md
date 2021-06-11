@@ -1,5 +1,7 @@
 # MCronberg.CSCourseHelper.Standard
 
+> Please note that 1.0.10 has moved 'MCronberg.CSCourseHelper.Standard' to 'MCronberg'.
+
 This is a simple package to help in C# training. It contains:
 
 - Extensions methods (remember to include MCronberg in using-statement)

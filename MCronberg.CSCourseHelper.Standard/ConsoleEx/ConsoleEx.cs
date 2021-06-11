@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace MCronberg.CSCourseHelper.Standard
+namespace MCronberg
 {
     public static class ConsoleEx
     {
@@ -135,6 +136,14 @@ namespace MCronberg.CSCourseHelper.Standard
                 Console.Write(item);
             }
             Console.WriteLine();
+        }
+
+        public static void LineBreak(int count = 1)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine();
+            }
         }
 
         private static string WriteAndReadText(string txt, object defaultValue = null, bool showDefaultValue = false)
